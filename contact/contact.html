@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f2">
+  <meta name="description" content="Get in touch with Aisha Foundation. Ask a question, explore working together, or learn how to support our work.">
+  <title>Contact Us | Aisha Foundation</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="contact.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../script.js" defer></script>
+  <script src="contact.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared navigation: keep consistent with the rest of the website. -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Aisha Foundation home">
+        <span class="brand-mark" aria-hidden="true"><img src="../images/Foundation-img.jpg" style="border-radius: 12px;"></span>
+        <span class="brand-name">Aisha <span>Foundation</span></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About Us</a>
+        <a class="nav-link" href="../programs.html">Our Work</a>
+        <a class="nav-link nav-cta active" href="contact.html">Get Involved</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <span id="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Dark mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="contact-page">
+    <section class="contact-hero">
+      <div class="container contact-hero-inner">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Contact Aisha Foundation</p>
+        <h1>You can start with a <em>conversation.</em></h1>
+
+      <p class="contact-hero-intro">
+        Sometimes reaching out is the hardest part. Whether you have
+        a question, need information about our work, or want to find
+        a way to get involved, we're glad you stopped by.
+      </p>
+
+      <p class="contact-hero-note">
+        There's no need to have everything figured out before you write.
+      </p>
+
+      <a class="button button-primary" href="#contact-form">
+        Send us a message ↓
+      </a>
+       
+        <div class="contact-hero-rule" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="contact-main-section section" id="contact-form">
+      <div class="container">
+        <div class="contact-layout">
+          <aside class="contact-intro">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Start a conversation</p>
+            <h2>What would you like us to know?</h2>
+            <p>
+              Use the form to contact our team about the foundation, our work,
+              volunteering, or possible partnerships. You don't need to find
+              the perfect words. A few lines are enough to get started.
+            </p>
+
+            <div class="contact-reassurance">
+              <span class="contact-reassurance-mark" aria-hidden="true">“</span>
+              <div>
+                <h3>A note about your message</h3>
+                <p>
+                  Please share only what you're comfortable sharing. This form
+                  is for general enquiries and isn't an emergency service.
+                  Avoid sending private medical details, passwords, or other
+                  sensitive information.
+                </p>
+              </div>
+            </div>
+
+            <p class="contact-small-note">
+              Not sure which topic to choose? Select “General enquiry” and we'll
+              take it from there.
+            </p>
+          </aside>
+
+          <div class="contact-form-card">
+            <form id="contactForm">
+              <div class="contact-form-grid">
+                <div class="contact-field">
+                  <label for="contactName">Your name</label>
+                  <input id="contactName" name="from_name" type="text" autocomplete="name" placeholder="What should we call you?" required maxlength="100">
+                </div>
+                <div class="contact-field">
+                  <label for="contactEmail">Email address</label>
+                  <input id="contactEmail" name="reply_to" type="email" autocomplete="email" placeholder="Where can we reply?" required maxlength="254">
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="contactSubject">What are you getting in touch about?</label>
+                  <select id="contactSubject" name="subject" required>
+                    <option value="" selected disabled>Choose a topic</option>
+                    <option value="General enquiry">A general question</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="Partnership">Working together</option>
+                    <option value="Donation enquiry">Supporting the foundation</option>
+                    <option value="Media or programme enquiry">Programmes or media</option>
+                    <option value="Other">Something else</option>
+                  </select>
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="contactMessage">Your message</label>
+                  <textarea id="contactMessage" name="message" rows="6" placeholder="Write whatever you'd like us to know..." required maxlength="5000"></textarea>
+                  <span class="contact-field-hint">Only share details you're comfortable sending through a website form.</span>
+                </div>
+              </div>
+              <button class="button button-primary contact-submit" id="contactSubmit" type="submit">
+                Send message <span aria-hidden="true">→</span>
+              </button>
+              <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="involvement-section section">
+      <div class="container">
+        <div class="involvement-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> If you'd like to be involved</p>
+          <h2>There are many ways to help.</h2>
+          <p>You don't have to have everything figured out before you get in touch.</p>
+        </div>
+        <div class="involvement-list">
+          <article class="involvement-item">
+            <span class="involvement-number">01</span>
+            <div>
+              <h3>Give your time</h3>
+              <p>If you'd like to volunteer or share a skill, tell us a little about yourself and what you'd be interested in helping with.</p>
+              <a class="text-link" href="#contact-form" data-contact-topic="Volunteering">Ask about volunteering <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="involvement-item">
+            <span class="involvement-number">02</span>
+            <div>
+              <h3>Work with us</h3>
+              <p>If your organisation or community group sees an opportunity to collaborate, we'd be happy to hear your idea.</p>
+              <a class="text-link" href="#contact-form" data-contact-topic="Partnership">Talk about a partnership <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="involvement-item">
+            <span class="involvement-number">03</span>
+            <div>
+              <h3>Support our work</h3>
+              <p>Want to know how you can support the foundation? Contact us to ask about current options and approved ways to contribute.</p>
+              <a class="text-link" href="#contact-form" data-contact-topic="Donation enquiry">Ask how to support us <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer: keep consistent with the rest of the website. -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark" aria-hidden="true"><img src="../images/Foundation-img.jpg" style="border-radius: 12px;"></span>
+          <span class="brand-name">Aisha <span>Foundation</span></span>
+        </a>
+        <p>Promoting mental health awareness, human dignity, emotional well-being and resilience.</p>
+      </div>
+      <div class="footer-links">
+        <h2>Explore</h2>
+        <a href="../about.html">About Us</a>
+        <a href="../programs.html">Our Work</a>
+        <a href="contact.html">Get Involved</a>
+      </div>
+      <div class="footer-links">
+        <h2>Our approach</h2>
+        <a href="../about.html#mission">Our Mission</a>
+        <a href="../programs.html">Programmes</a>
+        <a href="contact.html#contact-form">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Aisha Foundation. All rights reserved.</p>
+      <p>Built on dignity, compassion and respect.</p>
+    </div>
+  </footer>
+</body>
+</html>
